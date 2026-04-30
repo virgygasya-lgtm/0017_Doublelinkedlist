@@ -203,3 +203,21 @@ public:
             cout << "Record found, roll number: " << current->noMhs << endl;
     }
 };
+
+
+int main()
+{
+    DoubleLinkedList list;
+    char choice;
+
+    do
+    {
+        cout << "\nMenu\n";
+        cout << "1. Add Record\n";
+        cout << "2. Delete Record\n";
+        cout << "3. Traverse\n";
+        cout << "4. Reverse Traverse\n";
+        cout << "5. Search\n";
+        cout << "6. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
