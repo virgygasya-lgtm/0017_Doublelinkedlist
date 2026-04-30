@@ -129,4 +129,15 @@ public:
             cout << "List is empty" << endl;
             return;
         }
+
+          Node *currentnode = START;
+        cout << "Records in ascending order of roll number are:" << endl;
+
+        while (currentnode != NULL)
+        {
+            cout << currentnode->noMhs << " ";
+            currentnode = currentnode->next;
+        }
+        cout << endl;
+    }
     
