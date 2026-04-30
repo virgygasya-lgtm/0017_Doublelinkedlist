@@ -165,3 +165,12 @@ public:
         }
         cout << endl;
     }
+    {
+
+       while (currentnode != NULL)
+        {
+            cout << currentnode->noMhs << " ";
+            currentnode = currentnode->prev;
+        }
+        cout << endl;
+    }
