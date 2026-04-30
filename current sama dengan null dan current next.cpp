@@ -182,3 +182,24 @@ public:
             cout << "List is empty" << endl;
             return;
         }
+    }
+    {
+
+
+        int rollNo;
+        cout << "Enter the roll number to search: ";
+        cin >> rollNo;
+
+        Node *current = START;
+
+        while (current != NULL && current->noMhs != rollNo)
+        {
+            current = current->next;
+        }
+
+        if (current == NULL)
+            cout << "Record not found" << endl;
+        else
+            cout << "Record found, roll number: " << current->noMhs << endl;
+    }
+};
