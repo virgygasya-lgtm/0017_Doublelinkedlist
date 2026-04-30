@@ -244,3 +244,12 @@ int main()
         default:
             cout << "Invalid option\n";
         }
+
+         cout << "Press Enter to continue...";
+        cin.ignore();
+        cin.get();
+
+    } while (choice != '6');
+
+    return 0;
+}
