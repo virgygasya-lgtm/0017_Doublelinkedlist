@@ -32,3 +32,11 @@ public:
 
         newnode->noMhs = nim;
     }
+
+    if (START == NULL)
+        {
+            if (START != NULL && nim == START->noMhs)
+            {
+                cout << "Duplicate roll numbers not allowed" << endl;
+                return;
+            }
