@@ -76,4 +76,13 @@ public:
             current->next->prev = newnode2;
 
         current->next = newnode2;
+    }
+
+    void deleteNode()
+    {
+        if (START == NULL)
+        {
+            cout << "List is empty" << endl;
+            return;
+        }
     
