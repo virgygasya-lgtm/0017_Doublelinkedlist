@@ -248,6 +248,8 @@ int main()
          cout << "Press Enter to continue...";
         cin.ignore();
         cin.get();
+        cout << endl;
+        system("clear");
 
     } while (choice != '6');
 
