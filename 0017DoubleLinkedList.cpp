@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-using namespace std; 
+using namespace std;
 
 class Node
 {
@@ -14,7 +14,6 @@ class DoubleLinkedList
 {
 private:
     Node *START;
-}
 
 public:
     DoubleLinkedList()
@@ -22,7 +21,7 @@ public:
         START = NULL;
     }
 
-     void addNode()
+    void addNode()
     {
         int nim;
         cout << "Enter the roll number of the student: ";
@@ -31,19 +30,16 @@ public:
         Node *newnode = new Node();
 
         newnode->noMhs = nim;
-    }
 
-    if (START == NULL)
+        if (START == NULL)
         {
             if (START != NULL && nim == START->noMhs)
             {
                 cout << "Duplicate roll numbers not allowed" << endl;
                 return;
             }
-        }
-        {
 
-         newnode->next = START;
+            newnode->next = START;
 
             if (START != NULL)
                 START->prev = newnode;
@@ -101,7 +97,7 @@ public:
         {
             cout << "Record not found" << endl;
             return;
-        } 
+        }
 
         if (current == START)
         {
@@ -118,11 +114,11 @@ public:
             current->prev->next = current->next;
         }
 
-           delete current;
+        delete current;
         cout << "Record with roll number " << rollNo << " deleted" << endl;
     }
 
-     void traverse()
+    void traverse()
     {
         if (START == NULL)
         {
@@ -130,7 +126,7 @@ public:
             return;
         }
 
-          Node *currentnode = START;
+        Node *currentnode = START;
         cout << "Records in ascending order of roll number are:" << endl;
 
         while (currentnode != NULL)
@@ -141,8 +137,7 @@ public:
         cout << endl;
     }
 
-
-        void reverseTraverse()
+    void reverseTraverse()
     {
         if (START == NULL)
         {
@@ -158,16 +153,8 @@ public:
         }
 
         cout << "Records in descending order of roll number are:" << endl;
-        while (currentnode != NULL)
-        {
-            cout << currentnode->noMhs << " ";
-            currentnode = currentnode->prev;
-        }
-        cout << endl;
-    }
-    {
 
-       while (currentnode != NULL)
+        while (currentnode != NULL)
         {
             cout << currentnode->noMhs << " ";
             currentnode = currentnode->prev;
@@ -182,9 +169,6 @@ public:
             cout << "List is empty" << endl;
             return;
         }
-    }
-    {
-
 
         int rollNo;
         cout << "Enter the roll number to search: ";
@@ -204,7 +188,6 @@ public:
     }
 };
 
-
 int main()
 {
     DoubleLinkedList list;
@@ -222,7 +205,7 @@ int main()
         cout << "Enter your choice: ";
         cin >> choice;
 
-         switch (choice)
+        switch (choice)
         {
         case '1':
             list.addNode();
@@ -245,13 +228,13 @@ int main()
             cout << "Invalid option\n";
         }
 
-         cout << "Press Enter to continue...";
+        cout << "Press Enter to continue...";
         cin.ignore();
         cin.get();
         cout << endl;
         system("clear");
-
     } while (choice != '6');
 
     return 0;
 }
+
